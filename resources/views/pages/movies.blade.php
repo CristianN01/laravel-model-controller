@@ -11,14 +11,19 @@
 
     <ul>
         @foreach ($movies as $movie)
-            <div class="card">
+            <div class="card mycard">
                 <div class="card-body">
-                    <pre>
-                        {{ $movie->title; }} : {{ $movie->original_title }}
-                        Nationality: {{ $movie->nationality; }}
+                        <h1>
+                            {{ $movie->title; }} : {{ $movie->original_title }}
+                        </h1>
+                        <h2>
+                            Nationality: {{ $movie->nationality; }}
+                        </h2>
                         Date: {{ $movie->date; }}
-                        Vote: {{ $movie->vote; }}
-                    </pre>
+                        <br>
+                        <em>
+                            Vote: {{ $movie->vote; }}
+                        </em>
                 </div>
             </div>
         @endforeach
